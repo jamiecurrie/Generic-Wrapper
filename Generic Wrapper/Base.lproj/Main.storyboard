@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yge-vg-Gzf"/>
+                        <viewControllerLayoutGuide type="bottom" id="TEc-DV-dDK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fom-GL-nGI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yb-Bq-xTb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-f2-QBW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="i7w-0b-4vU">
+                                        <barButtonItem key="leftBarButtonItem" image="back_btn" id="zzt-th-PcN">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="backBtnAction:" destination="BYZ-38-t0r" id="oeY-Vg-LtM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hcd-f2-QBW" firstAttribute="top" secondItem="fom-GL-nGI" secondAttribute="top" id="I84-yQ-2I2"/>
+                            <constraint firstItem="TEc-DV-dDK" firstAttribute="top" secondItem="6yb-Bq-xTb" secondAttribute="bottom" id="MGS-Cc-bKo"/>
+                            <constraint firstItem="6yb-Bq-xTb" firstAttribute="leading" secondItem="fom-GL-nGI" secondAttribute="leading" id="QLi-AN-S33"/>
+                            <constraint firstAttribute="trailing" secondItem="6yb-Bq-xTb" secondAttribute="trailing" id="QYS-MW-d1Q"/>
+                            <constraint firstItem="6yb-Bq-xTb" firstAttribute="top" secondItem="fom-GL-nGI" secondAttribute="top" id="apS-fs-nwU"/>
+                            <constraint firstAttribute="trailing" secondItem="hcd-f2-QBW" secondAttribute="trailing" id="eP3-z6-jNt"/>
+                            <constraint firstItem="hcd-f2-QBW" firstAttribute="leading" secondItem="fom-GL-nGI" secondAttribute="leading" id="wcz-n3-jRf"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="navBar" destination="hcd-f2-QBW" id="oIE-Vd-Z1V"/>
+                        <outlet property="topNaveOffset" destination="apS-fs-nwU" id="T3Q-Jx-RKE"/>
+                        <outlet property="webView" destination="6yb-Bq-xTb" id="jmm-o9-wSL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_btn" width="28" height="28"/>
+    </resources>
+</document>
