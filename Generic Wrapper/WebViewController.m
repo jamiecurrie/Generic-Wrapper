@@ -23,6 +23,7 @@
     
     // Init
     webView.delegate = self;
+    webView.scrollView.scrollEnabled = CAN_SCROLL;
     navBar.hidden = true;
     
     // Call local or dev
@@ -84,6 +85,7 @@
     else if ([[[[request URL] pathExtension] uppercaseString] isEqualToString:@"PDF"]) {
         navBar.hidden = false;
         topNaveOffset.constant = navBar.frame.size.height;
+        
     }
     
     // Return 'true', navigate to requested URL as normal if no condition found
