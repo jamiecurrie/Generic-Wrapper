@@ -9,7 +9,6 @@
 
 #warning Set webview settings here
 #define LOCAL_MODE true
-#define CAN_SCROLL false
-
-
-
+#define CAN_SCROLL true
+#define BOUNCE true
+#define FIT_PAGE true
