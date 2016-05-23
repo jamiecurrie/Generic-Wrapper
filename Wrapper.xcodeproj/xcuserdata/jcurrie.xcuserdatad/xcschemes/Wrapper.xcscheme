@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91960D501C197B6900E56652"
-               BuildableName = "Generic Wrapper.app"
-               BlueprintName = "Generic Wrapper"
-               ReferencedContainer = "container:Generic Wrapper.xcodeproj">
+               BuildableName = "Wrapper.app"
+               BlueprintName = "Wrapper"
+               ReferencedContainer = "container:Wrapper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91960D501C197B6900E56652"
-            BuildableName = "Generic Wrapper.app"
-            BlueprintName = "Generic Wrapper"
-            ReferencedContainer = "container:Generic Wrapper.xcodeproj">
+            BuildableName = "Wrapper.app"
+            BlueprintName = "Wrapper"
+            ReferencedContainer = "container:Wrapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91960D501C197B6900E56652"
-            BuildableName = "Generic Wrapper.app"
-            BlueprintName = "Generic Wrapper"
-            ReferencedContainer = "container:Generic Wrapper.xcodeproj">
+            BuildableName = "Wrapper.app"
+            BlueprintName = "Wrapper"
+            ReferencedContainer = "container:Wrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91960D501C197B6900E56652"
-            BuildableName = "Generic Wrapper.app"
-            BlueprintName = "Generic Wrapper"
-            ReferencedContainer = "container:Generic Wrapper.xcodeproj">
+            BuildableName = "Wrapper.app"
+            BlueprintName = "Wrapper"
+            ReferencedContainer = "container:Wrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

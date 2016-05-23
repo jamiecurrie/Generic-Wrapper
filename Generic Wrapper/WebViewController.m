@@ -32,7 +32,7 @@
     if (LOCAL_MODE) {
         [webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html" inDirectory:@"www"] isDirectory:NO]]];
     } else {
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:PREVIEW_URL]];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:WEB_URL]];
         [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
         [webView loadRequest: request];
     }
@@ -59,10 +59,12 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSLog(@"LOADING: %@", [[request URL] absoluteString]);
     
+    NSString *host = [[request URL] host];
+    NSString *setHost = [[NSURL URLWithString:WEB_URL] host];
     topNaveOffset.constant = 0; // reset top offset
 
     // Callback function catcher
-    if ([[[request URL] scheme] isEqualToString:(@"callback")]) {
+    if ([host isEqualToString:(@"callback")]) {
         
         NSString *function = [[request URL] host];
         NSArray *query = [[[request URL] query] componentsSeparatedByString:@"&"];
@@ -80,6 +82,12 @@
         }
         
         // Return 'false' to stop browser continuing
+        return false;
+    }
+    
+    // if host only set stop browsing away from site
+    else if (![host isEqualToString:setHost] && HOST_ONLY) {
+        NSLog(@"HOST_ONLY set true redirect blocked");
         return false;
     }
     
