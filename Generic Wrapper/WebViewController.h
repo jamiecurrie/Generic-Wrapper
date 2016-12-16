@@ -11,6 +11,7 @@
 // =============
 
 #define WEB_URL @"http://www.google.co.uk/"
+#define LOCAL_FOLDER @"www"
 
 
 // =============
